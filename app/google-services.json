@@ -1,1 +1,39 @@
-//please add your google-service.json file 
+{
+  "project_info": {
+    "project_number": "1072777192198",
+    "project_id": "secquraise-60371",
+    "storage_bucket": "secquraise-60371.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072777192198:android:c3ad7e40ed7c0c0bfc3487",
+        "android_client_info": {
+          "package_name": "com.secquraise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072777192198-gnee5m1s0l2kl37v4n64dtbvbqgtr91g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoKZIoFo_z7YJ4ShOOesxL3fLjNK4qqew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072777192198-gnee5m1s0l2kl37v4n64dtbvbqgtr91g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

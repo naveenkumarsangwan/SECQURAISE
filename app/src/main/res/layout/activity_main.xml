@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/timeValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/timeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="200sp"
+            app:layout_constraintEnd_toEndOf="@+id/timeValue"
+            app:layout_constraintStart_toStartOf="@+id/timeValue"
+            app:layout_constraintTop_toBottomOf="@+id/timeValue"
+            app:srcCompat="@drawable/img"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/captureCount"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|left"
+            android:text="@string/capture_count"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/frequency"
+            app:layout_constraintEnd_toStartOf="@+id/captureCountValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/captureCountValue"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/frequencyValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/captureCount"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/frequency"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|left"
+            android:text="@string/frequency_min"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/connectivity"
+            app:layout_constraintEnd_toStartOf="@+id/frequencyValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/captureCount"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/frequencyValue"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/connectivityValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frequency"
+            app:layout_constraintTop_toBottomOf="@+id/captureCountValue" />
+
+        <TextView
+            android:id="@+id/connectivity"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|left"
+            android:text="@string/connectivity"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/batteryCharging"
+            app:layout_constraintEnd_toStartOf="@+id/connectivityValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frequency"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/connectivityValue"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/batteryChargingValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/connectivity"
+            app:layout_constraintTop_toBottomOf="@+id/frequencyValue" />
+
+        <TextView
+            android:id="@+id/batteryCharging"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|left"
+            android:text="@string/battery_charging"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/batteryCharg"
+            app:layout_constraintEnd_toStartOf="@+id/batteryChargingValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connectivity"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/batteryChargingValue"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/batteryChargValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/batteryCharging"
+            app:layout_constraintTop_toBottomOf="@+id/connectivityValue" />
+
+        <TextView
+            android:id="@+id/batteryCharg"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|left"
+            android:text="@string/battery_charge"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/location"
+            app:layout_constraintEnd_toStartOf="@+id/batteryChargValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/batteryCharging"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/batteryChargValue"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/locationValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/batteryCharg"
+            app:layout_constraintTop_toBottomOf="@+id/batteryChargingValue" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|left"
+            android:text="@string/location"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/locationValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/batteryCharg"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/locationValue"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:gravity="center|end"
+            android:textColor="@color/valColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/location"
+            app:layout_constraintTop_toBottomOf="@+id/batteryChargValue" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/btnColor"
+            android:paddingStart="50sp"
+            android:paddingEnd="50sp"
+            android:text="@string/manual_data_refresh"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
